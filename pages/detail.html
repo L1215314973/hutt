@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品详情 - 长安风物志</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <span>✦ 满299元全国包邮 | 30天无忧退换 ✦</span>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo/logo.png" alt="长安风物志" onerror="this.style.display='none'">
+        <span class="logo-text">长安风物志<span class="logo-sub">Tang Dynasty · Oriental Aesthetics</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="products.html">全部商品</a>
+        <a href="about.html">关于我们</a>
+        <a href="cart.html">购物车</a>
+        <a href="order.html">我的订单</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="products.html" class="nav-icon" title="搜索"><img src="../images/icons/search.svg" alt="搜索" style="width:22px;height:22px;" onerror="this.outerHTML='🔍'"></a>
+        <a href="login.html" class="nav-icon" title="登录"><img src="../images/icons/user.svg" alt="用户" style="width:22px;height:22px;" onerror="this.outerHTML='👤'"></a>
+        <a href="cart.html" class="nav-icon" title="购物车">
+          <img src="../images/icons/cart.svg" alt="购物车" style="width:22px;height:22px;" onerror="this.outerHTML='🛒'">
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 面包屑导航 -->
+    <div class="container">
+      <nav class="breadcrumb">
+        <a href="../index.html">首页</a> / <a href="products.html">全部商品</a> / <span id="breadcrumbName">商品详情</span>
+      </nav>
+    </div>
+
+    <!-- 商品详情区 -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-layout">
+          <!-- 左侧商品大图 -->
+          <div class="detail-gallery">
+            <div class="main-image" id="mainImage">
+              <!-- 商品大图：images/products/detail1.jpg（推荐 600×600） -->
+              <img src="../images/products/product1.jpg" alt="商品图片" id="productImage"
+                   onerror="this.parentElement.style.background='linear-gradient(135deg, #F8F3E8 0%, #EBE0CC 100%)'; this.style.display='none';">
+            </div>
+          </div>
+
+          <!-- 右侧商品信息 -->
+          <div class="detail-info">
+            <span class="detail-category" id="productCategory">团扇</span>
+            <h1 class="detail-name" id="productName">锦绣团扇 · 花鸟卷</h1>
+            <p class="detail-brief" id="productBrief">手工苏绣双面团扇，丝线细腻栩栩如生</p>
+
+            <!-- 价格 -->
+            <div class="detail-price-box">
+              <span class="detail-price" id="productPrice">¥128</span>
+              <span class="detail-price-original" id="productOrigPrice" style="display:none">¥256</span>
+              <span class="detail-discount" id="productDiscount" style="display:none">5折</span>
+            </div>
+
+            <!-- 分割线 -->
+            <hr class="detail-divider">
+
+            <!-- 规格 / 数量 -->
+            <div class="detail-options">
+              <span class="option-label">数量</span>
+              <div class="quantity-control">
+                <button class="qty-btn" id="qtyMinus">−</button>
+                <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="99" readonly>
+                <button class="qty-btn" id="qtyPlus">+</button>
+              </div>
+              <span class="stock-info" id="stockInfo">库存充足</span>
+            </div>
+
+            <!-- 操作按钮 -->
+            <div class="detail-actions">
+              <button class="btn btn-primary btn-lg" id="addToCartBtn">🛒 加入购物车</button>
+              <button class="btn btn-fav btn-lg" id="favBtn">♡ 加入收藏</button>
+              <button class="btn btn-gold btn-lg" id="buyNowBtn">⚡ 立即购买</button>
+            </div>
+
+            <!-- 保障 -->
+            <div class="detail-guarantee">
+              <span>✓ 正品保证</span>
+              <span>✓ 30天退换</span>
+              <span>✓ 全国包邮</span>
+              <span>✓ 非遗传承</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab 切换区 -->
+    <section class="detail-tabs-section">
+      <div class="container">
+        <div class="detail-tabs">
+          <button class="tab-btn active" data-tab="desc">商品描述</button>
+          <button class="tab-btn" data-tab="specs">详细参数</button>
+          <button class="tab-btn" data-tab="reviews">用户评价</button>
+        </div>
+
+        <div class="tab-content active" id="tab-desc"><div class="tab-inner" id="descContent"></div></div>
+        <div class="tab-content" id="tab-specs"><div class="tab-inner" id="specsContent"></div></div>
+        <div class="tab-content" id="tab-reviews"><div class="tab-inner" id="reviewsContent"></div></div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>长安风物志</h3><p>传承东方美学，汇聚非遗匠心。</p></div>
+        <div class="footer-col"><h3>快速链接</h3><a href="../index.html">首页</a><a href="products.html">全部商品</a></div>
+        <div class="footer-col"><h3>帮助中心</h3><a href="#">购物指南</a><a href="#">配送说明</a></div>
+        <div class="footer-col"><h3>联系我们</h3><p>📍 长安城朱雀大街888号<br>📞 666-888-6688</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 长安风物志. All Rights Reserved. </p></div>
+    </div>
+  </footer>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/detail.js"></script>
+</body>
+</html>

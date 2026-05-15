@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>注册 - 长安风物志</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css">
+  <link rel="stylesheet" href="../css/register.css">
+</head>
+<body class="auth-page">
+
+  <div class="announcement-bar">
+    <span>✦ 注册即享首单9折优惠 ✦</span>
+  </div>
+
+  <main class="auth-container">
+    <a href="../index.html" class="auth-back">← 返回首页</a>
+
+    <div class="auth-card">
+      <div class="auth-logo">
+        <a href="../index.html" class="logo">
+          <!-- Logo: ../images/logo/logo.png -->
+          <img src="../images/logo/logo.png" alt="Logo" onerror="this.style.display='none'">
+          <span class="logo-text">长安风物志</span>
+        </a>
+      </div>
+
+      <h1 class="auth-title">用户注册</h1>
+      <p class="auth-subtitle">加入长安，共赏东方之美</p>
+
+      <form class="auth-form" id="registerForm" novalidate>
+        <!-- 用户名 -->
+        <div class="form-group">
+          <label for="username">用户名</label>
+          <div class="input-wrapper">
+            <span class="input-icon">👤</span>
+            <input type="text" id="username" placeholder="2-12位中文/英文/数字" autocomplete="username" required>
+          </div>
+          <span class="form-error" id="usernameError"></span>
+        </div>
+
+        <!-- 手机号 -->
+        <div class="form-group">
+          <label for="phone">手机号</label>
+          <div class="input-wrapper">
+            <span class="input-icon">📱</span>
+            <input type="tel" id="phone" placeholder="请输入11位手机号（用于登录）" autocomplete="tel" required>
+          </div>
+          <span class="form-error" id="phoneError"></span>
+        </div>
+
+        <!-- 密码 -->
+        <div class="form-group">
+          <label for="password">密码</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="password" placeholder="至少6位，含字母和数字" autocomplete="new-password" required>
+          </div>
+          <span class="form-error" id="passwordError"></span>
+        </div>
+
+        <!-- 确认密码 -->
+        <div class="form-group">
+          <label for="confirmPassword">确认密码</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔐</span>
+            <input type="password" id="confirmPassword" placeholder="请再次输入密码" autocomplete="new-password" required>
+          </div>
+          <span class="form-error" id="confirmError"></span>
+        </div>
+
+        <!-- 注册按钮 -->
+        <button type="submit" class="btn btn-primary auth-submit">注 册</button>
+
+        <div class="auth-links">
+          <span>已有账号？</span>
+          <a href="login.html">立即登录 →</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- 依赖脚本（按顺序加载） -->
+  <script src="../js/storage.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/register.js"></script>
+</body>
+</html>

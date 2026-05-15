@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车 - 长安风物志</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/cart.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <span>✦ 满299元全国包邮 ✦</span>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo/logo.png" alt="长安风物志" onerror="this.style.display='none'">
+        <span class="logo-text">长安风物志<span class="logo-sub">Tang Dynasty · Oriental Aesthetics</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="products.html">全部商品</a>
+        <a href="about.html">关于我们</a>
+        <a href="cart.html" class="active">购物车</a>
+        <a href="order.html">我的订单</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" title="登录"><img src="../images/icons/user.svg" alt="用户" style="width:22px;height:22px;" onerror="this.outerHTML='👤'"></a>
+        <a href="cart.html" class="nav-icon" title="购物车">
+          <img src="../images/icons/cart.svg" alt="购物车" style="width:22px;height:22px;" onerror="this.outerHTML='🛒'">
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>购物车</h1>
+        <p>查看已选风物，确认订单信息</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="cart-layout">
+        <!-- 购物车列表 -->
+        <div class="cart-main">
+          <!-- 表头 -->
+          <div class="cart-header">
+            <span class="col-check"></span>
+            <span class="col-product">商品信息</span>
+            <span class="col-price">单价</span>
+            <span class="col-qty">数量</span>
+            <span class="col-subtotal">小计</span>
+            <span class="col-action">操作</span>
+          </div>
+
+          <!-- 商品列表 -->
+          <div class="cart-list" id="cartList">
+            <!-- JS 动态渲染 -->
+          </div>
+
+          <!-- 空购物车 -->
+          <div class="cart-empty" id="cartEmpty" style="display:none">
+            <span class="empty-icon"><img src="../images/icons/cart.svg" alt="" style="width:60px;height:60px;" onerror="this.outerHTML='🛒'"></span>
+            <p>购物车还是空的</p>
+            <p class="empty-sub">快去挑选心仪的风物吧</p>
+            <a href="products.html" class="btn btn-primary">去逛逛</a>
+          </div>
+        </div>
+
+        <!-- 结算栏 -->
+        <div class="cart-summary" id="cartSummary">
+          <h3>订单摘要</h3>
+          <div class="summary-row">
+            <span>商品总数</span>
+            <span id="summaryCount">0 件</span>
+          </div>
+          <div class="summary-row">
+            <span>商品金额</span>
+            <span id="summarySubtotal">¥0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>运费</span>
+            <span id="summaryFreight">¥0.00</span>
+          </div>
+          <div class="summary-row summary-total">
+            <span>合计</span>
+            <span id="summaryTotal">¥0.00</span>
+          </div>
+          <p class="freight-hint" id="freightHint">满299元免运费</p>
+          <button class="btn btn-primary btn-lg checkout-btn" id="checkoutBtn">去结算</button>
+          <a href="products.html" class="continue-shopping">← 继续选购</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>长安风物志</h3><p>传承东方美学，汇聚非遗匠心。</p></div>
+        <div class="footer-col"><h3>快速链接</h3><a href="../index.html">首页</a><a href="products.html">全部商品</a></div>
+        <div class="footer-col"><h3>帮助中心</h3><a href="#">购物指南</a><a href="#">配送说明</a></div>
+        <div class="footer-col"><h3>联系我们</h3><p>📞 666-888-6688<br>📧 service@chang-an.com</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 长安风物志. All Rights Reserved. </p></div>
+    </div>
+  </footer>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+</body>
+</html>

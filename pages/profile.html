@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>用户中心 - 长安风物志</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/profile.css">
+</head>
+<body>
+
+  <div class="announcement-bar">
+    <span>✦ 长安风物，尽在此间 ✦</span>
+  </div>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../index.html" class="logo">
+        <img src="../images/logo/logo.png" alt="长安风物志" onerror="this.style.display='none'">
+        <span class="logo-text">长安风物志<span class="logo-sub">Tang Dynasty · Oriental Aesthetics</span></span>
+      </a>
+      <nav class="main-nav">
+        <a href="../index.html">首页</a>
+        <a href="products.html">全部商品</a>
+        <a href="about.html">关于我们</a>
+        <a href="cart.html">购物车</a>
+        <a href="order.html">我的订单</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="login.html" class="nav-icon" title="登录"><img src="../images/icons/user.svg" alt="用户" style="width:22px;height:22px;" onerror="this.outerHTML='👤'"></a>
+        <a href="cart.html" class="nav-icon" title="购物车">
+          <img src="../images/icons/cart.svg" alt="购物车" style="width:22px;height:22px;" onerror="this.outerHTML='🛒'">
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <button class="mobile-menu-btn" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-banner">
+      <div class="container">
+        <h1>用户中心</h1>
+        <p>管理你的长安风物之旅</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="profile-layout">
+        <!-- 左侧个人信息卡片 -->
+        <aside class="profile-sidebar">
+          <div class="profile-avatar">
+            <span class="avatar-text" id="avatarText">用</span>
+          </div>
+          <h2 id="profileName">用户名</h2>
+          <p class="profile-phone" id="profilePhone">手机号</p>
+          <p class="profile-date" id="profileDate">注册时间</p>
+          <button class="btn btn-outline logout-btn" id="logoutBtn">退出登录</button>
+        </aside>
+
+        <!-- 右侧统计面板 -->
+        <div class="profile-main">
+          <div class="stats-grid">
+            <a href="order.html" class="stat-card">
+              <span class="stat-icon">📋</span>
+              <span class="stat-num" id="statOrders">0</span>
+              <span class="stat-label">我的订单</span>
+            </a>
+            <a href="favorite.html" class="stat-card">
+              <span class="stat-icon">♥</span>
+              <span class="stat-num" id="statFavorites">0</span>
+              <span class="stat-label">收藏商品</span>
+            </a>
+            <a href="cart.html" class="stat-card">
+              <span class="stat-icon">🛒</span>
+              <span class="stat-num" id="statCart">0</span>
+              <span class="stat-label">购物车</span>
+            </a>
+          </div>
+
+          <!-- 快捷入口 -->
+          <div class="quick-links">
+            <h3>快捷入口</h3>
+            <div class="quick-grid">
+              <a href="order.html" class="quick-item">📋 我的订单</a>
+              <a href="favorite.html" class="quick-item">♥ 我的收藏</a>
+              <a href="cart.html" class="quick-item">🛒 购物车</a>
+              <a href="../index.html" class="quick-item">🏠 回到首页</a>
+              <a href="products.html" class="quick-item">🎁 全部商品</a>
+              <a href="about.html" class="quick-item">📜 关于我们</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>长安风物志</h3><p>传承东方美学，汇聚非遗匠心。</p></div>
+        <div class="footer-col"><h3>快速链接</h3><a href="../index.html">首页</a><a href="products.html">全部商品</a></div>
+        <div class="footer-col"><h3>帮助中心</h3><a href="#">购物指南</a><a href="#">配送说明</a></div>
+        <div class="footer-col"><h3>联系我们</h3><p>📞 400-888-6688<br>📧 service@chang-an.com</p></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2026 长安风物志. All Rights Reserved. </p></div>
+    </div>
+  </footer>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/profile.js"></script>
+</body>
+</html>

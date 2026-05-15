@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录 - 长安风物志</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+<body class="auth-page">
+
+  <div class="announcement-bar">
+    <span>✦ 长安风物，尽在此间 ✦</span>
+  </div>
+
+  <main class="auth-container">
+    <a href="../index.html" class="auth-back">← 返回首页</a>
+
+    <div class="auth-card">
+      <div class="auth-logo">
+        <a href="../index.html" class="logo">
+          <img src="../images/logo/logo.png" alt="Logo" onerror="this.style.display='none'">
+          <span class="logo-text">长安风物志</span>
+        </a>
+      </div>
+
+      <h1 class="auth-title">用户登录</h1>
+      <p class="auth-subtitle">登临长安，一览风物</p>
+
+      <!-- 登录表单：手机号 + 密码 -->
+      <form class="auth-form" id="loginForm" novalidate>
+        <!-- 手机号 -->
+        <div class="form-group">
+          <label for="phone">手机号</label>
+          <div class="input-wrapper">
+            <span class="input-icon">📱</span>
+            <input
+              type="tel"
+              id="phone"
+              placeholder="请输入注册时的手机号"
+              autocomplete="tel"
+              required
+            >
+          </div>
+          <span class="form-error" id="phoneError"></span>
+        </div>
+
+        <!-- 密码 -->
+        <div class="form-group">
+          <label for="password">密码</label>
+          <div class="input-wrapper">
+            <span class="input-icon">🔒</span>
+            <input
+              type="password"
+              id="password"
+              placeholder="请输入密码"
+              autocomplete="current-password"
+              required
+            >
+          </div>
+          <span class="form-error" id="passwordError"></span>
+        </div>
+
+        <!-- 登录按钮 -->
+        <button type="submit" class="btn btn-primary auth-submit">登 录</button>
+
+        <!-- 底部链接 -->
+        <div class="auth-links">
+          <span>还没有账号？</span>
+          <a href="register.html">立即注册 →</a>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- 依赖脚本 -->
+  <script src="../js/storage.js"></script>
+  <script src="../js/toast.js"></script>
+  <script src="../js/auth.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>
