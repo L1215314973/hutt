@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="长安风物志 - 东方美学文创商城，传承千年文化之美">
+  <title>长安风物志 - 东方美学文创商城</title>
+  <!-- 全局样式 -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animation.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <!-- 首页样式 -->
+  <link rel="stylesheet" href="css/home.css">
+  <!-- 网站图标 -->
+  <link rel="icon" href="images/logo/favicon.png" type="image/png">
+</head>
+<body>
+
+  <!-- ==================== 顶部公告栏 ==================== -->
+  <div class="announcement-bar">
+    <span>✦ 新用户首单享9折优惠，满299包邮 ✦  长安风物，尽在此间</span>
+  </div>
+
+  <!-- ==================== 导航栏 ==================== -->
+  <header class="main-header">
+    <div class="container">
+      <!-- Logo -->
+      <a href="index.html" class="logo">
+        <!--
+          请将 logo 图片放入 images/logo/logo.png
+          推荐尺寸：48×48px 或 96×96px，PNG 透明背景
+        -->
+        <img src="images/logo/logo.png" alt="长安风物志 Logo" onerror="this.style.display='none'">
+        <span class="logo-text">长安风物志<span class="logo-sub">Tang Dynasty · Oriental Aesthetics</span></span>
+      </a>
+
+      <!-- 主导航 -->
+      <nav class="main-nav">
+        <a href="index.html" class="active">首页</a>
+        <a href="pages/products.html">全部商品</a>
+        <a href="pages/about.html">关于我们</a>
+        <a href="pages/cart.html">购物车</a>
+        <a href="pages/order.html">我的订单</a>
+      </nav>
+
+      <!-- 右侧操作 -->
+      <div class="nav-actions">
+        <a href="pages/products.html" class="nav-icon" title="搜索" aria-label="搜索商品">
+          <img src="images/icons/search.svg" alt="搜索" style="width:22px;height:22px;" onerror="this.outerHTML='🔍'">
+        </a>
+        <a href="pages/login.html" class="nav-icon" title="登录" aria-label="用户登录">
+          <img src="images/icons/user.svg" alt="用户" style="width:22px;height:22px;" onerror="this.outerHTML='👤'">
+        </a>
+        <a href="pages/cart.html" class="nav-icon" title="购物车" aria-label="购物车">
+          <img src="images/icons/cart.svg" alt="购物车" style="width:22px;height:22px;" onerror="this.outerHTML='🛒'">
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <!-- 移动端菜单按钮 -->
+        <button class="mobile-menu-btn" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== 主内容区 ==================== -->
+  <main>
+
+    <!-- ========== Banner 轮播图 ========== -->
+    <section class="hero-banner" aria-label="首页轮播图">
+      <div class="banner-track">
+
+        <!-- 幻灯片 1 -->
+        <div class="banner-slide">
+          <!-- 背景图：images/banner/banner1.jpg（推荐 1920×520） -->
+          <img src="images/banner/banner1.jpg" alt="长安春色" class="banner-bg"
+               onerror="this.parentElement.style.background='linear-gradient(135deg, #2B2B2B 0%, #8B1E1E 40%, #D4A056 100%)'; this.remove();">
+          <div class="banner-content">
+            <p class="banner-subtitle">—— 梦回大唐 ——</p>
+            <h2 class="banner-title">长安风物志</h2>
+            <p class="banner-desc">传承千年东方美学，品味盛世文化瑰宝</p>
+            <a href="pages/products.html" class="btn btn-gold btn-lg">探寻风物</a>
+          </div>
+        </div>
+
+        <!-- 幻灯片 2 -->
+        <div class="banner-slide">
+          <!-- 背景图：images/banner/banner2.jpg（推荐 1920×520） -->
+          <img src="images/banner/banner2.jpg" alt="匠人手作" class="banner-bg"
+               onerror="this.parentElement.style.background='linear-gradient(135deg, #1a3a2a 0%, #2B2B2B 40%, #D4A056 100%)'; this.remove();">
+          <div class="banner-content">
+            <p class="banner-subtitle">—— 匠心手作 ——</p>
+            <h2 class="banner-title">非遗传承</h2>
+            <p class="banner-desc">每一件器物，都承载着匠人世代的温度与故事</p>
+            <a href="pages/products.html" class="btn btn-gold btn-lg">立即选购</a>
+          </div>
+        </div>
+
+        <!-- 幻灯片 3 -->
+        <div class="banner-slide">
+          <!-- 背景图：images/banner/banner3.jpg（推荐 1920×520） -->
+          <img src="images/banner/banner3.jpg" alt="雅集时光" class="banner-bg"
+               onerror="this.parentElement.style.background='linear-gradient(135deg, #4a1a2e 0%, #8B1E1E 40%, #B8873A 100%)'; this.remove();">
+          <div class="banner-content">
+            <p class="banner-subtitle">—— 雅集时光 ——</p>
+            <h2 class="banner-title">春日雅集</h2>
+            <p class="banner-desc">限时特惠，精选文创好物低至五折起</p>
+            <a href="pages/products.html" class="btn btn-gold btn-lg">抢购好物</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 左右切换箭头 -->
+      <button class="banner-arrow prev" aria-label="上一张">❮</button>
+      <button class="banner-arrow next" aria-label="下一张">❯</button>
+
+      <!-- 小圆点指示器 -->
+      <div class="banner-dots"></div>
+    </section>
+
+    <!-- ========== 热门商品展示 ========== -->
+    <section class="hot-products">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label section-label-decorated">热门推荐</span>
+          <h2>当季风物</h2>
+          <p class="section-desc">精选大唐风韵，传承东方美学</p>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- 商品 1 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product1.jpg（推荐 600×600） -->
+              <img src="images/products/product1.jpg" alt="锦绣团扇"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <span class="card-tag new">新品</span>
+
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">锦绣团扇 · 花鸟卷</h3>
+              <p class="card-desc">手工苏绣双面团扇，丝线细腻栩栩如生</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>128</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="1" onclick="addToCart({id:1,name:'锦绣团扇 · 花鸟卷',price:128})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 2 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product2.jpg -->
+              <img src="images/products/product2.jpg" alt="沉香木香囊"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <span class="card-tag hot">热卖</span>
+              <button class="card-fav" aria-label="收藏" data-product-id="2">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">沉香木雕花香囊</h3>
+              <p class="card-desc">天然沉香木手工雕刻，暗香浮动安神养心</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>89</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="2" onclick="addToCart({id:2,name:'沉香木雕花香囊',price:89})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 3 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product3.jpg -->
+              <img src="images/products/product3.jpg" alt="白玉兰花发簪"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <button class="card-fav" aria-label="收藏" data-product-id="3">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">白玉兰花发簪</h3>
+              <p class="card-desc">天然白玉精雕兰花，温润典雅步摇生姿</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>156</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="3" onclick="addToCart({id:3,name:'白玉兰花发簪',price:156})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 4 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product4.jpg -->
+              <img src="images/products/product4.jpg" alt="青瓷茶具套装"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <span class="card-tag new">新品</span>
+              <button class="card-fav" aria-label="收藏" data-product-id="4">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">青瓷茶具套装</h3>
+              <p class="card-desc">龙泉青瓷一壶四杯，釉色温润如雨后初晴</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>268</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="4" onclick="addToCart({id:4,name:'青瓷茶具套装',price:268})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 5 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product5.jpg -->
+              <img src="images/products/product5.jpg" alt="宫灯夜明"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <button class="card-fav" aria-label="收藏" data-product-id="5">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">宫灯夜明 · 六角纱灯</h3>
+              <p class="card-desc">传统六角宫灯造型，柔光映照营造古风意境</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>198</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="5" onclick="addToCart({id:5,name:'宫灯夜明 · 六角纱灯',price:198})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 6 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product6.jpg -->
+              <img src="images/products/product6.jpg" alt="兰亭序书签"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <button class="card-fav" aria-label="收藏" data-product-id="6">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">兰亭序黄铜书签</h3>
+              <p class="card-desc">蚀刻《兰亭集序》全文，黄铜做旧古意盎然</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>58</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="6" onclick="addToCart({id:6,name:'兰亭序黄铜书签',price:58})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 7 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product7.jpg -->
+              <img src="images/products/product7.jpg" alt="文房四宝套装"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <span class="card-tag hot">热卖</span>
+              <button class="card-fav" aria-label="收藏" data-product-id="7">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">文房四宝礼盒套装</h3>
+              <p class="card-desc">湖笔徽墨宣纸端砚，雅士书房必备之选</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>388</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="7" onclick="addToCart({id:7,name:'文房四宝礼盒套装',price:388})">+</button>
+              </div>
+            </div>
+          </article>
+
+          <!-- 商品 8 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product8.jpg -->
+              <img src="images/products/product8.jpg" alt="青花瓷摆件"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #F8F3E8, #EBE0CC)';">
+              <button class="card-fav" aria-label="收藏" data-product-id="8">♡</button>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">青花瓷古风摆件</h3>
+              <p class="card-desc">景德镇手工青花，案头雅物增添文人气息</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>168</span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="8" onclick="addToCart({id:8,name:'青花瓷古风摆件',price:168})">+</button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-2xl);">
+          <a href="pages/products.html" class="btn btn-outline btn-lg">查看全部商品 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 分类专区 ========== -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label section-label-decorated">分类浏览</span>
+          <h2>风物雅集</h2>
+          <p class="section-desc">寻一味风雅，寄一段长安</p>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="categories-grid">
+          <!--
+            分类图标：images/icons/ 目录下
+            请自行放入对应 PNG/SVG 图标文件
+          -->
+          <a href="pages/products.html?category=fan" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/fan.svg" alt="团扇" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='🪭'">
+            </div>
+            <span class="cate-name">团 扇</span>
+          </a>
+          <a href="pages/products.html?category=sachet" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/sachet.svg" alt="香囊" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='🏮'">
+            </div>
+            <span class="cate-name">香 囊</span>
+          </a>
+          <a href="pages/products.html?category=hairpin" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/hairpin.svg" alt="发簪" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='💮'">
+            </div>
+            <span class="cate-name">发 簪</span>
+          </a>
+          <a href="pages/products.html?category=tea" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/tea.svg" alt="茶具" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='🍵'">
+            </div>
+            <span class="cate-name">茶 具</span>
+          </a>
+          <a href="pages/products.html?category=lantern" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/lantern.svg" alt="灯笼" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='🏮'">
+            </div>
+            <span class="cate-name">灯 笼</span>
+          </a>
+          <a href="pages/products.html?category=bookmark" class="category-card">
+            <div class="cate-icon">
+              <img src="images/icons/bookmark.svg" alt="书签" style="width:36px;height:36px;" onerror="this.parentElement.innerHTML='📜'">
+            </div>
+            <span class="cate-name">书 签</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 限时秒杀 ========== -->
+    <section class="flash-sale">
+      <div class="container">
+        <div class="flash-header">
+          <span class="flash-title">⚡ 限时秒杀</span>
+          <div class="flash-countdown">
+            <div>
+              <div class="countdown-item" id="countdown-hours">00</div>
+              <div class="countdown-label">时</div>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div>
+              <div class="countdown-item" id="countdown-minutes">00</div>
+              <div class="countdown-label">分</div>
+            </div>
+            <span class="countdown-sep">:</span>
+            <div>
+              <div class="countdown-item" id="countdown-seconds">00</div>
+              <div class="countdown-label">秒</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flash-products">
+          <!-- 秒杀商品 1 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/product9.jpg -->
+              <img src="images/products/product9.jpg" alt="苏绣丝巾"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fff0f0, #ffe8d0)';">
+              <span class="card-tag hot">秒杀</span>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">苏绣真丝方巾</h3>
+              <p class="card-desc">苏州绣娘手工刺绣，百蝶穿花图案</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>99 <span class="original">¥238</span></span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="9" onclick="addToCart({id:9,name:'苏绣真丝方巾',price:99})">+</button>
+              </div>
+              <div class="flash-progress">
+                <div class="flash-progress-bar"><div class="progress-inner" style="width:65%"></div></div>
+                <span class="flash-progress-text">已抢 65%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 秒杀商品 2 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/flash2.jpg -->
+              <img src="images/products/product10.jpg" alt="紫砂壶"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #f0ebe0, #e8ddd0)';">
+              <span class="card-tag hot">秒杀</span>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">宜兴紫砂西施壶</h3>
+              <p class="card-desc">原矿紫泥手工拉坯，泡茶隔夜不馊</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>258 <span class="original">¥458</span></span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="10" onclick="addToCart({id:10,name:'宜兴紫砂西施壶',price:258})">+</button>
+              </div>
+              <div class="flash-progress">
+                <div class="flash-progress-bar"><div class="progress-inner" style="width:82%"></div></div>
+                <span class="flash-progress-text">已抢 82%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 秒杀商品 3 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/flash3.jpg -->
+              <img src="images/products/product11.jpg" alt="竹编灯笼"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #fef8e8, #fef0d0)';">
+              <span class="card-tag hot">秒杀</span>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">手工竹编灯笼</h3>
+              <p class="card-desc">非遗竹编工艺，暖黄灯光营造中式浪漫</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>49 <span class="original">¥98</span></span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="11" onclick="addToCart({id:11,name:'手工竹编灯笼',price:49})">+</button>
+              </div>
+              <div class="flash-progress">
+                <div class="flash-progress-bar"><div class="progress-inner" style="width:43%"></div></div>
+                <span class="flash-progress-text">已抢 43%</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 秒杀商品 4 -->
+          <article class="product-card">
+            <div class="card-img">
+              <!-- 商品图：images/products/flash4.jpg -->
+              <img src="images/products/product12.jpg" alt="唐风仕女俑"
+                   onerror="this.style.display='none'; this.parentElement.style.background='linear-gradient(135deg, #faf5ef, #f5ead8)';">
+              <span class="card-tag hot">秒杀</span>
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">唐风仕女陶俑</h3>
+              <p class="card-desc">复刻唐代仕女俑，丰腴华贵尽显盛唐气象</p>
+              <div class="card-bottom">
+                <span class="card-price"><span class="unit">¥</span>168 <span class="original">¥328</span></span>
+                <button class="card-cart-btn" aria-label="加入购物车" data-id="12" onclick="addToCart({id:12,name:'唐风仕女陶俑',price:168})">+</button>
+              </div>
+              <div class="flash-progress">
+                <div class="flash-progress-bar"><div class="progress-inner" style="width:91%"></div></div>
+                <span class="flash-progress-text">已抢 91%</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 品牌故事 ========== -->
+    <section class="brand-story">
+      <div class="container">
+        <div class="story-content">
+          <div class="story-image">
+            <!-- 品牌故事图：images/banner/story.jpg（推荐 800×600） -->
+            <img src="images/banner/story.jpg" alt="长安风物志品牌故事"
+                 onerror="this.parentElement.style.background='linear-gradient(135deg, #8B1E1E 0%, #D4A056 50%, #2B2B2B 100%)'; this.remove();">
+          </div>
+          <div class="story-text">
+            <h2>长安风物志</h2>
+            <p class="story-verse">"云想衣裳花想容，春风拂槛露华浓。"</p>
+            <p>
+              「长安风物志」诞生于对中华传统文化的深深眷恋。我们走遍大江南北，
+              寻访非遗传承人，将团扇的清风、香囊的幽韵、发簪的雅致、茶具的禅意，
+              一一汇聚于此。每一件器物，都是一段历史的缩影，一种生活美学的表达。
+            </p>
+            <p>
+              我们相信，东方美学不是陈列在博物馆里的标本，而是融入当代生活的诗意。
+              从盛唐气象到现代日常，长安风物志致力于让传统文化焕发新的生命力。
+            </p>
+            <a href="pages/about.html" class="btn btn-primary">了解更多</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 用户评价 ========== -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label section-label-decorated">用户雅评</span>
+          <h2>风物知音</h2>
+          <p class="section-desc">来自风物爱好者的真实评价</p>
+          <span class="section-line"></span>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "买了锦绣团扇送给母亲，她爱不释手。苏绣工艺精湛，每一针每一线都能感受到匠人的用心。包装也很精美，送礼非常体面。"
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:linear-gradient(135deg, #D4A056, #E8C97A)"></div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">林黛玉</span>
+                <span class="reviewer-date">2026年3月</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "青瓷茶具套装太美了！釉色温润如玉，每天用它泡茶都是一种享受。包装严实没有磕碰，客服态度也很好，推荐购买。"
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:linear-gradient(135deg, #8B1E1E, #A33030)"></div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">苏东坡</span>
+                <span class="reviewer-date">2026年2月</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-text">
+              "第三次购买了，每次都有惊喜。这次买的文房四宝套装，毛笔弹性极佳，墨条研磨顺畅，纸张吸墨均匀，非常满意！"
+            </p>
+            <div class="reviewer">
+              <div class="reviewer-avatar" style="background:linear-gradient(135deg, #5B8C5A, #6B8EA0)"></div>
+              <div class="reviewer-info">
+                <span class="reviewer-name">王羲之</span>
+                <span class="reviewer-date">2026年4月</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 页脚 ==================== -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- 品牌信息 -->
+        <div class="footer-col">
+          <h3>长安风物志</h3>
+          <p>
+            传承东方美学，汇聚非遗匠心。<br>
+            每一件风物，都是千年文化的延续。<br>
+            唐风国韵，尽在长安。
+          </p>
+        </div>
+
+        <!-- 快速链接 -->
+        <div class="footer-col">
+          <h3>快速链接</h3>
+          <a href="index.html">首页</a>
+          <a href="pages/products.html">全部商品</a>
+          <a href="pages/about.html">关于我们</a>
+          <a href="pages/cart.html">购物车</a>
+        </div>
+
+        <!-- 帮助中心 -->
+        <div class="footer-col">
+          <h3>帮助中心</h3>
+          <a href="#">购物指南</a>
+          <a href="#">退换货政策</a>
+          <a href="#">配送说明</a>
+          <a href="#">常见问题</a>
+        </div>
+
+        <!-- 联系我们 -->
+        <div class="footer-col">
+          <h3>联系我们</h3>
+          <p>
+            📍 长安城朱雀大街888号<br>
+            📞 666-888-6688<br>
+            📧 service@chang-an.com<br>
+            🕐 周一至周日 9:00-21:00
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 长安风物志 Chang'an Style Chronicles. All Rights Reserved. </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== 返回顶部按钮 ==================== -->
+  <button class="back-to-top" aria-label="返回顶部">↑</button>
+
+  <!-- ==================== JavaScript ==================== -->
+  <script src="js/storage.js"></script>
+  <script src="js/toast.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,214 @@
+/* ============================================================
+   长安风物志 - 商品展示页样式
+   ============================================================ */
+
+/* 页面 Banner */
+.page-banner {
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.page-banner h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-banner p {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+/* 商品页布局 */
+.products-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: var(--spacing-xl);
+  padding: var(--spacing-lg) 0 var(--spacing-3xl);
+}
+
+/* ========== 左侧分类栏 ========== */
+.sidebar {
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+  align-self: start;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(212, 160, 86, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.sidebar h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--gold);
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-item {
+  display: block;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  transition: all var(--transition-fast);
+  letter-spacing: 1px;
+}
+
+.category-item:hover {
+  background: rgba(212, 160, 86, 0.1);
+  color: var(--gold-dark);
+}
+
+.category-item.active {
+  background: var(--red);
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* ========== 搜索栏 ========== */
+.search-bar {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 18px;
+  border: 2px solid var(--gray-light);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  transition: all var(--transition-normal);
+  background: var(--white);
+}
+
+.search-bar input:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(212, 160, 86, 0.1);
+}
+
+.search-bar button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: var(--white);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+}
+
+.search-bar button:hover {
+  background: linear-gradient(135deg, var(--red-light), var(--red));
+  box-shadow: 0 4px 12px rgba(139, 30, 30, 0.3);
+}
+
+/* 结果信息 */
+.products-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+/* 商品网格 */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+/* 无结果提示 */
+.no-result {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--spacing-3xl) 0;
+  color: var(--gray);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.no-result .no-result-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+/* 响应式 */
+@media (max-width: 992px) {
+  .products-layout {
+    grid-template-columns: 180px 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .products-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  .category-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .category-item {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    gap: var(--spacing-sm);
+  }
+}

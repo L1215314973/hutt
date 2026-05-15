@@ -1,0 +1,282 @@
+/* ============================================================
+   长安风物志 - 订单页样式
+   ============================================================ */
+
+/* 复用 page-banner */
+.page-banner {
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-banner h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-banner p {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+/* 状态筛选 Tab */
+.order-tabs {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
+  flex-wrap: wrap;
+}
+
+.order-tab {
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  background: var(--white);
+  color: var(--ink-light);
+  border: 1px solid var(--gray-light);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.order-tab:hover {
+  border-color: var(--gold);
+  color: var(--gold-dark);
+}
+
+.order-tab.active {
+  background: var(--red);
+  color: var(--white);
+  border-color: var(--red);
+}
+
+/* 订单列表 */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-bottom: var(--spacing-3xl);
+}
+
+/* 订单卡片 */
+.order-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--gray-light);
+  overflow: hidden;
+  transition: box-shadow var(--transition-normal);
+}
+
+.order-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+/* 订单头部 */
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--cream);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.order-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: 0.85rem;
+}
+
+.order-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+/* 订单删除按钮 */
+.order-delete-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-round);
+  background: transparent;
+  color: var(--gray);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.order-delete-btn:hover {
+  background: rgba(192, 64, 64, 0.1);
+  color: var(--danger);
+  transform: scale(1.1);
+}
+
+.order-label {
+  color: var(--gray);
+}
+
+.order-id {
+  color: var(--ink);
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: 'Courier New', monospace;
+}
+
+.order-time {
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+/* 订单状态 */
+.order-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* 待付款 - 橙色 */
+.status-pending {
+  background: rgba(232, 168, 64, 0.12);
+  color: #C78520;
+  border: 1px solid rgba(232, 168, 64, 0.3);
+}
+
+/* 待发货 - 蓝色 */
+.status-shipped {
+  background: rgba(107, 142, 160, 0.12);
+  color: #3A6B8C;
+  border: 1px solid rgba(107, 142, 160, 0.3);
+}
+
+/* 已完成 - 绿色 */
+.status-completed {
+  background: rgba(91, 140, 90, 0.12);
+  color: #3A6B3A;
+  border: 1px solid rgba(91, 140, 90, 0.3);
+}
+
+/* 订单主体 */
+.order-body {
+  padding: var(--spacing-lg);
+}
+
+.order-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
+  border-bottom: 1px dashed var(--gray-light);
+}
+
+.order-item-name {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  background: var(--cream);
+  padding: 4px 12px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 1px;
+}
+
+/* 可点击的商品链接 */
+.order-item-link {
+  display: inline-block;
+  transition: all var(--transition-fast);
+  color: var(--ink-light);
+}
+
+.order-item-link:hover {
+  background: var(--red);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* 订单元信息 */
+.order-meta {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+}
+
+.order-meta-item {
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+}
+
+.order-meta-item span {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-bottom: 2px;
+}
+
+.order-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.order-total span {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+/* 空订单 */
+.order-empty {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.order-empty .empty-icon {
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.order-empty .empty-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.order-empty p {
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.order-empty .empty-sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+  .order-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .order-header-left {
+    flex-wrap: wrap;
+  }
+
+  .order-meta {
+    grid-template-columns: 1fr;
+  }
+}

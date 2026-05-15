@@ -1,0 +1,331 @@
+/* ============================================================
+   长安风物志 - 购物车页样式
+   ============================================================ */
+
+/* 复用 page-banner */
+.page-banner {
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: var(--spacing-xl);
+}
+
+.page-banner h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-banner p {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+/* 购物车布局 */
+.cart-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-3xl);
+  align-items: start;
+}
+
+/* ========== 购物车主体 ========== */
+.cart-main {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+/* 表头 */
+.cart-header {
+  display: grid;
+  grid-template-columns: 40px 2fr 1fr 1.2fr 1fr 80px;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--cream);
+  border-bottom: 2px solid var(--gold);
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* 商品行 */
+.cart-item {
+  display: grid;
+  grid-template-columns: 40px 2fr 1fr 1.2fr 1fr 80px;
+  gap: var(--spacing-sm);
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--gray-light);
+  transition: background var(--transition-fast);
+}
+
+.cart-item:hover {
+  background: rgba(248, 243, 232, 0.4);
+}
+
+/* 商品信息 */
+.cart-product {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.cart-product-img {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--cream-dark);
+  flex-shrink: 0;
+}
+
+.cart-product-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cart-product-name {
+  font-size: 0.9rem;
+  color: var(--ink);
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 价格列 */
+.cart-item-price {
+  font-size: 0.95rem;
+  color: var(--ink);
+  font-weight: 500;
+}
+
+/* 数量控制 */
+.cart-qty-control {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  overflow: hidden;
+}
+
+.cart-qty-control .qty-btn {
+  width: 32px;
+  height: 32px;
+  background: var(--cream);
+  color: var(--ink);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.cart-qty-control .qty-btn:hover {
+  background: var(--gold);
+  color: var(--white);
+}
+
+.cart-qty-control .qty-input {
+  width: 44px;
+  height: 32px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-left: 1px solid var(--gray-light);
+  border-right: 1px solid var(--gray-light);
+  background: var(--white);
+}
+
+/* 小计 */
+.cart-item-subtotal {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+/* 删除按钮 */
+.cart-delete-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-round);
+  background: transparent;
+  color: var(--gray);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.cart-delete-btn:hover {
+  background: rgba(192, 64, 64, 0.1);
+  color: var(--danger);
+}
+
+/* 空购物车 */
+.cart-empty {
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.cart-empty .empty-icon {
+  display: block;
+  margin-bottom: var(--spacing-md);
+}
+
+.cart-empty .empty-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+.cart-empty p {
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 2px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.cart-empty .empty-sub {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ========== 结算栏 ========== */
+.cart-summary {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-xl);
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+  border: 1px solid rgba(212, 160, 86, 0.2);
+}
+
+.cart-summary h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 3px;
+  margin-bottom: var(--spacing-lg);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--gold);
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+}
+
+.summary-total {
+  border-top: 1px dashed var(--gray-light);
+  margin-top: var(--spacing-sm);
+  padding-top: var(--spacing-md);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.freight-hint {
+  font-size: 0.75rem;
+  color: var(--success);
+  text-align: center;
+  margin: var(--spacing-sm) 0 var(--spacing-md);
+  letter-spacing: 1px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.05rem;
+  letter-spacing: 4px;
+  margin-top: var(--spacing-sm);
+}
+
+.continue-shopping {
+  display: block;
+  text-align: center;
+  margin-top: var(--spacing-md);
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+.continue-shopping:hover {
+  color: var(--red);
+}
+
+/* 响应式 */
+@media (max-width: 992px) {
+  .cart-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-summary {
+    position: static;
+  }
+
+  .cart-header,
+  .cart-item {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .cart-header .col-check,
+  .cart-item .col-check,
+  .cart-header .col-action,
+  .cart-item .col-action {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cart-header {
+    display: none;
+  }
+
+  .cart-item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+  }
+
+  .cart-product {
+    flex-direction: row;
+  }
+
+  .cart-item-price::before {
+    content: '单价：';
+    color: var(--gray);
+    font-size: 0.8rem;
+  }
+
+  .cart-item-subtotal::before {
+    content: '小计：';
+    color: var(--gray);
+    font-size: 0.8rem;
+  }
+
+  .cart-delete-btn {
+    align-self: flex-end;
+  }
+}

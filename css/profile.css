@@ -1,0 +1,204 @@
+/* ============================================================
+   长安风物志 - 用户中心样式
+   ============================================================ */
+
+.page-banner {
+  background: linear-gradient(135deg, var(--red-dark), var(--red));
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+}
+
+.page-banner::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.page-banner h1 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.page-banner p {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  letter-spacing: 3px;
+}
+
+/* 布局 */
+.profile-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-3xl);
+}
+
+/* 左侧个人信息 */
+.profile-sidebar {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  text-align: center;
+  border: 1px solid rgba(212, 160, 86, 0.2);
+}
+
+.profile-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-round);
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--spacing-md);
+  box-shadow: 0 4px 16px rgba(139, 30, 30, 0.3);
+}
+
+.avatar-text {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.profile-sidebar h2 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--ink);
+  letter-spacing: 3px;
+  margin-bottom: var(--spacing-xs);
+}
+
+.profile-phone {
+  font-size: 0.85rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.profile-date {
+  font-size: 0.75rem;
+  color: var(--gray);
+  margin-bottom: var(--spacing-lg);
+}
+
+.logout-btn {
+  width: 100%;
+}
+
+/* 统计面板 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid transparent;
+  transition: all var(--transition-normal);
+  display: block;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+  border-color: var(--gold);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--red);
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  letter-spacing: 1px;
+}
+
+/* 快捷入口 */
+.quick-links {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(212, 160, 86, 0.2);
+}
+
+.quick-links h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--ink);
+  letter-spacing: 3px;
+  margin-bottom: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--gold);
+}
+
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.quick-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  background: var(--cream);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  letter-spacing: 1px;
+  transition: all var(--transition-fast);
+}
+
+.quick-item:hover {
+  background: var(--red);
+  color: var(--white);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .quick-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+}

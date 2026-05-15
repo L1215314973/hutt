@@ -1,0 +1,37 @@
+/* ============================================================
+   长安风物志 - 响应式布局补充
+   各页面主要响应式断点已在各自 CSS 中定义
+   此文件用于全局微调
+   ============================================================ */
+
+/* 打印样式 */
+@media print {
+  .main-header,
+  .announcement-bar,
+  .back-to-top,
+  .main-footer,
+  .nav-actions { display: none !important; }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
+
+/* 超大屏优化 */
+@media (min-width: 1400px) {
+  :root {
+    --container-max: 1320px;
+  }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
