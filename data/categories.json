@@ -1,6 +1,6 @@
 [
   { "id": "fan",       "name": "团扇", "icon": "🪭" },
-  { "id": "sachet",    "name": "香囊", "icon": "🏮" },
+  { "id": "sachet",    "name": "香囊", "icon": "🪔" },
   { "id": "hairpin",   "name": "发簪", "icon": "💮" },
   { "id": "tea",       "name": "茶具", "icon": "🍵" },
   { "id": "lantern",   "name": "灯笼", "icon": "🏮" },
